@@ -14,16 +14,19 @@
   <div class="bg-grid"></div>
 
   <header class="navbar">
-    <a class="brand" href="#home">DG<span>.</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav id="nav">
+    <a class="brand" href="#home">Ganesh <span>Dudala</span></a>
+    <div class="nav-wrap">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark theme">☀️</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <nav id="nav">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#certification">Certification</a>
       <a href="#contact">Contact</a>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -41,13 +44,23 @@
         </div>
         <div class="quick-links">
           <a href="https://www.linkedin.com/in/ganesh-goud-730265260" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/doodalaganesh" target="_blank" rel="noopener">GitHub ↗</a>
           <a href="mailto:doodalaganesh123@gmail.com">Email ↗</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <div class="status"><span></span> Open to opportunities</div>
-        <div class="initials">DG</div>
+        <div class="status">
+          <svg class="status-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m11 17 2 2a1 1 0 1 0 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m21 3 1 11h-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 4h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Let's Work Together
+        </div>
+        <img class="profile-photo" src="assets/profile.jpeg" alt="Dudala Ganesh profile photo" />
         <h2>AI • GenAI • ML</h2>
         <p>LangChain · LangGraph · CrewAI · RAG · Azure OpenAI · FastAPI</p>
         <div class="mini-stats">
@@ -88,9 +101,12 @@
         <article class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-head">
-            <div>
-              <h3>Associate Data Scientist (Agentic AI Engineer)</h3>
-              <p class="company">R Systems International</p>
+            <div class="timeline-info">
+              <img src="assets/rsi_logo.png" alt="R Systems International logo" class="company-logo" />
+              <div>
+                <h3>Associate Data Scientist</h3>
+                <p class="company">R Systems International</p>
+              </div>
             </div>
             <span class="date">May 2025 — Current</span>
           </div>
@@ -103,9 +119,12 @@
         <article class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-head">
-            <div>
-              <h3>Machine Learning Engineer — Intern</h3>
-              <p class="company">DRDO · Defence Research and Development Organization</p>
+            <div class="timeline-info">
+              <img src="assets/DRDO_logo.webp" alt="DRDO logo" class="company-logo" />
+              <div>
+                <h3>Machine Learning Engineer — Intern</h3>
+                <p class="company">DRDO · Defence Research and Development Organization</p>
+              </div>
             </div>
             <span class="date">Mar 2025 — May 2025</span>
           </div>
@@ -117,9 +136,15 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section" id="projects" data-view="business">
       <p class="section-kicker">03 / PROJECTS</p>
-      <h2 class="section-title">Selected work</h2>
+      <div class="projects-header">
+        <h2 class="section-title">Selected work</h2>
+        <div class="view-toggle" role="tablist" aria-label="Project view mode">
+          <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+          <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+        </div>
+      </div>
 
       <div class="projects-grid">
         <article class="project featured">
@@ -128,18 +153,33 @@
             <span class="project-domain">HR / WORKFORCE AI</span>
           </div>
           <h3>Zyra 2.0</h3>
-          <p>
-            AI-powered HR recruitment and attrition intelligence platform combining
-            Machine Learning, Generative AI, RAG and interactive dashboards.
-          </p>
-          <ul>
-            <li>LangChain-based RAG with Azure OpenAI</li>
-            <li>NL-to-SQL conversational analytics</li>
-            <li>XGBoost attrition prediction</li>
-            <li>Hiring-demand forecasting</li>
-            <li>FastAPI + React + DuckDB</li>
-            <li>Docker + Azure Container Apps</li>
-          </ul>
+          <p>AI-powered HR recruitment and attrition intelligence platform for smarter workforce decisions.</p>
+
+          <div class="project-view project-business">
+            <h4>Business Perspective</h4>
+            <ul>
+              <li>Helps HR teams move from reactive hiring to proactive workforce planning</li>
+              <li>Reduces attrition risk by identifying employees likely to leave early</li>
+              <li>Improves hiring efficiency with demand forecasting and recruitment insights</li>
+              <li>Enables leaders to ask workforce questions in plain language instead of waiting on reports</li>
+              <li>Delivers measurable ROI through better retention and faster hiring cycles</li>
+              <li>Supports data-driven decisions across recruitment, retention and workforce strategy</li>
+            </ul>
+          </div>
+
+          <div class="project-view project-technical">
+            <h4>Architecture Flow</h4>
+            <p class="flow">HR Data Sources → ETL & Feature Engineering → DuckDB Analytics Store → ML Models (XGBoost Attrition + Hiring Forecast) + LangChain RAG (Azure OpenAI) → FastAPI Services → React Dashboards → Docker on Azure Container Apps</p>
+            <h4>Tools & Process</h4>
+            <ul>
+              <li>LangChain-based RAG with Azure OpenAI for conversational HR analytics</li>
+              <li>NL-to-SQL pipeline for natural-language workforce queries</li>
+              <li>XGBoost model for employee attrition prediction</li>
+              <li>Time-series forecasting for hiring demand planning</li>
+              <li>FastAPI backend with React + TypeScript frontend</li>
+              <li>DuckDB for fast analytical queries and Docker deployment on Azure</li>
+            </ul>
+          </div>
           <div class="tech">Python · TypeScript · SQL · LangChain · Azure OpenAI · XGBoost · FastAPI · React · DuckDB · Docker · Azure</div>
         </article>
 
@@ -149,18 +189,32 @@
             <span class="project-domain">SALES / DOCUMENT AI</span>
           </div>
           <h3>SalesWhiz Enhancement V.2</h3>
-          <p>
-            Enterprise document intelligence and knowledge retrieval platform for
-            sales and presales teams, processing business documents and enabling
-            semantic and hybrid search.
-          </p>
-          <ul>
-            <li>PDF, DOCX, PPTX and Excel extraction</li>
-            <li>OCR and Vision AI processing</li>
-            <li>Pinecone vector retrieval</li>
-            <li>Agentic AI retrieval pipelines</li>
-            <li>Hybrid search + Cohere re-ranking</li>
-          </ul>
+          <p>Enterprise document intelligence platform that helps sales teams find answers across proposals, decks and product content.</p>
+
+          <div class="project-view project-business">
+            <h4>Business Perspective</h4>
+            <ul>
+              <li>Solves slow presales response times caused by scattered business documents</li>
+              <li>Helps sales teams reuse proven content from past proposals and case studies</li>
+              <li>Improves win rates by delivering accurate answers during client conversations</li>
+              <li>Preserves institutional knowledge when team members change roles</li>
+              <li>Reduces manual document search effort across PDFs, decks and spreadsheets</li>
+            </ul>
+          </div>
+
+          <div class="project-view project-technical">
+            <h4>Architecture Flow</h4>
+            <p class="flow">Document Upload (PDF/DOCX/PPTX/Excel) → Extraction + OCR + Vision AI → Chunking & Embeddings → Pinecone Vector Store + Neo4j Knowledge Graph → Hybrid Search + Cohere Re-ranking → Agentic RAG Retrieval Pipeline → Sales Q&A Interface</p>
+            <h4>Tools & Process</h4>
+            <ul>
+              <li>Multi-format document parsing for PDF, DOCX, PPTX and Excel</li>
+              <li>OCR and Vision AI for unstructured and image-based content</li>
+              <li>Pinecone vector retrieval with semantic search capabilities</li>
+              <li>Agentic AI pipelines for context-aware answer generation</li>
+              <li>Hybrid search with Cohere re-ranking for higher answer precision</li>
+              <li>Neo4j graph layer for relationship-aware enterprise knowledge</li>
+            </ul>
+          </div>
           <div class="tech">Python · LLM · NLP · Vision AI · OCR · RAG · Pinecone · Neo4j · Cohere</div>
         </article>
 
@@ -170,16 +224,29 @@
             <span class="project-domain">ML / SMART TRAFFIC</span>
           </div>
           <h3>Spatio-Temporal Traffic Predictor</h3>
-          <p>
-            Traffic flow prediction system developed during the DRDO internship,
-            using STGCN to model spatial and temporal traffic patterns.
-          </p>
-          <ul>
-            <li>PEMS traffic dataset preprocessing</li>
-            <li>STGCN implementation in PyTorch</li>
-            <li>Spatial + temporal dependency learning</li>
-            <li>Hyperparameter tuning and evaluation</li>
-          </ul>
+          <p>Traffic flow forecasting system built during the DRDO internship to support smarter mobility planning.</p>
+
+          <div class="project-view project-business">
+            <h4>Business Perspective</h4>
+            <ul>
+              <li>Addresses congestion by predicting traffic flow before bottlenecks form</li>
+              <li>Supports better route planning and traffic management decisions</li>
+              <li>Helps authorities optimize infrastructure and reduce commuter delays</li>
+              <li>Demonstrates practical ML value for public-sector mobility challenges</li>
+            </ul>
+          </div>
+
+          <div class="project-view project-technical">
+            <h4>Architecture Flow</h4>
+            <p class="flow">PEMS Traffic Dataset → Preprocessing & Graph Construction → STGCN Model (PyTorch) → Spatial-Temporal Feature Learning → Traffic Flow Prediction → Evaluation & Hyperparameter Tuning</p>
+            <h4>Tools & Process</h4>
+            <ul>
+              <li>PEMS dataset preprocessing for traffic sensor time-series data</li>
+              <li>STGCN implementation in PyTorch for graph-based forecasting</li>
+              <li>Spatial and temporal dependency modeling across road networks</li>
+              <li>Model evaluation, tuning and performance benchmarking</li>
+            </ul>
+          </div>
           <div class="tech">Python · PyTorch · STGCN · GNN · NumPy · Pandas</div>
         </article>
       </div>
@@ -203,7 +270,10 @@
     <section class="section education" id="education">
       <p class="section-kicker">05 / EDUCATION</p>
       <div class="education-card">
-        <div>
+        <div class="logo-box logo-box--srys">
+          <img src="assets/srys_logo.png" alt="Sreyas Institute of Engineering and Technology logo" />
+        </div>
+        <div class="education-info">
           <h2>Bachelor of Technology (AIML)</h2>
           <p>Sreyas Institute of Engineering & Technology, Hyderabad</p>
         </div>
@@ -214,10 +284,17 @@
     <section class="section" id="certification">
       <p class="section-kicker">06 / CERTIFICATION</p>
       <div class="cert-card">
-        <div class="cert-icon">✓</div>
-        <div>
-          <h2>Databricks Certified Generative AI Engineer Associate</h2>
+        <div class="logo-box logo-box--databricks">
+          <img src="assets/Explore-the-Generative-AI-Fundamentals-by-Databricks-Free-Start-Now.jpg" alt="Databricks logo" />
+        </div>
+        <div class="cert-info">
+          <h2>
+            <a href="https://credentials.databricks.com/9a61f6b2-9ac9-41be-bc21-6b919feb1042" target="_blank" rel="noopener">
+              Databricks Certified Generative AI Engineer Associate
+            </a>
+          </h2>
           <p>Issued August 5, 2026 · Valid through August 5, 2028 · Credential ID: 190654673</p>
+          <a class="cert-link" href="https://credentials.databricks.com/9a61f6b2-9ac9-41be-bc21-6b919feb1042" target="_blank" rel="noopener">View Certificate ↗</a>
         </div>
       </div>
     </section>
@@ -232,6 +309,7 @@
       <div class="contact-actions">
         <a class="btn primary" href="mailto:doodalaganesh123@gmail.com">Email Me</a>
         <a class="btn secondary" href="https://www.linkedin.com/in/ganesh-goud-730265260" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn secondary" href="https://github.com/doodalaganesh" target="_blank" rel="noopener">View GitHub</a>
         <a class="btn secondary" href="assets/Dudala_Ganesh_Resume.pdf" target="_blank">Resume</a>
       </div>
     </section>
