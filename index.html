@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,24 +8,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
   <div class="bg-grid"></div>
 
   <header class="navbar">
     <a class="brand" href="#home">Ganesh <span>Dudala</span></a>
-    <div class="nav-wrap">
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark theme">☀️</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      <nav id="nav">
-      <a href="#about">About</a>
+    <nav class="nav-center" id="nav">
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certification">Certification</a>
-      <a href="#contact">Contact</a>
-      </nav>
+      <a href="#upcoming" class="nav-upcoming">Upcoming<span class="nav-live-dot" aria-hidden="true"></span></a>
+      <a href="#about" class="nav-mobile-only">About</a>
+      <a href="#skills" class="nav-mobile-only">Skills</a>
+      <a href="#education" class="nav-mobile-only">Education</a>
+      <a href="#certification" class="nav-mobile-only">Certification</a>
+      <a href="#contact" class="nav-mobile-only">Contact</a>
+    </nav>
+    <div class="nav-wrap">
+      <div class="profile-menu">
+        <button class="profile-menu-btn" id="profileMenuBtn" type="button" aria-expanded="false" aria-haspopup="true">
+          <svg class="profile-menu-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span class="profile-menu-label">Profile</span>
+          <svg class="profile-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <img class="nav-avatar" src="assets/profile.jpeg" alt="Ganesh Dudala" width="36" height="36" />
+        <div class="profile-dropdown" id="profileDropdown" hidden>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#certification">Certification</a>
+          <a href="#contact">Contact</a>
+          <a href="assets/Dudala_Ganesh_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="https://www.linkedin.com/in/ganesh-goud-730265260" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/doodalaganesh" target="_blank" rel="noopener">GitHub</a>
+          <button class="profile-theme-btn" id="themeBtn" type="button">Toggle theme</button>
+        </div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </header>
 
@@ -34,39 +54,92 @@
       <div class="hero-copy">
         <p class="eyebrow">AGENTIC AI ENGINEER • DATA SCIENTIST</p>
         <h1>Building practical <span>AI systems</span> for real-world problems.</h1>
-        <p class="hero-text">
-          I'm Dudala Ganesh, an Agentic AI Engineer and Data Scientist focused on
-          LLMs, RAG, multi-agent systems, machine learning and production-ready AI applications.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore My Work ↘</a>
-          <a class="btn secondary" href="assets/Dudala_Ganesh_Resume.pdf" target="_blank">View Resume ↗</a>
+        <div class="hero-bio">
+          <p class="hero-text">
+            I'm Ganesh Dudala — an <strong>Agentic AI Engineer &amp; Data Scientist</strong> focused on creating intelligent software that solves real-world problems.
+          </p>
+          <p class="hero-text">
+            I work across <strong>Generative AI, Agentic AI, RAG, Machine Learning, and data intelligence</strong> — building practical solutions for <strong>Healthcare, Insurance, Financial Services, and enterprise teams</strong>.
+          </p>
         </div>
-        <div class="quick-links">
-          <a href="https://www.linkedin.com/in/ganesh-goud-730265260" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://github.com/doodalaganesh" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="mailto:doodalaganesh123@gmail.com">Email ↗</a>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore My Work →</a>
+          <a class="btn secondary" href="assets/Dudala_Ganesh_Resume.pdf" target="_blank">View Resume →</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="status">
-          <svg class="status-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="m11 17 2 2a1 1 0 1 0 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="m21 3 1 11h-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 4h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Let's Work Together
+      <div class="hero-card hero-profile-card v2">
+        <div class="hero-card-grid-bg" aria-hidden="true"></div>
+
+        <div class="hero-profile-row">
+          <div class="profile-ring profile-ring--hero">
+            <div class="profile-photo-frame">
+              <img class="profile-photo" src="assets/profile.jpeg" alt="Ganesh Dudala profile photo" />
+            </div>
+          </div>
+          <div class="hero-profile-intro">
+            <p class="profile-hello">Hello, I'm</p>
+            <h2 class="profile-name">Ganesh Dudala</h2>
+            <span class="profile-tag">AI ENGINEER • DATA SCIENTIST</span>
+          </div>
         </div>
-        <img class="profile-photo" src="assets/profile.jpeg" alt="Dudala Ganesh profile photo" />
-        <h2>AI • GenAI • ML</h2>
-        <p>LangChain · LangGraph · CrewAI · RAG · Azure OpenAI · FastAPI</p>
-        <div class="mini-stats">
-          <div><strong>1+</strong><span>Year Experience</span></div>
-          <div><strong>3</strong><span>Featured Projects</span></div>
-          <div><strong>AI</strong><span>Core Focus</span></div>
+
+        <div class="hero-pillars">
+          <div class="hero-pillar">
+            <div class="hero-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 3h8l1 4H7l1-4ZM6 9h12v2a6 6 0 0 1-12 0V9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 14v2M12 14v3M15 14v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="6" r="1" fill="currentColor"/><circle cx="15" cy="6" r="1" fill="currentColor"/></svg>
+            </div>
+            <strong>AI Systems</strong>
+            <p>GenAI, Agentic AI &amp; RAG Solutions</p>
+          </div>
+          <div class="hero-pillar">
+            <div class="hero-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="1.6"/><path d="M5 6v4c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 10v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-4" stroke="currentColor" stroke-width="1.6"/><path d="M5 14v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <strong>Data Intelligence</strong>
+            <p>Transforming data into actionable insights</p>
+          </div>
+          <div class="hero-pillar">
+            <div class="hero-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13 5l-3 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong>Software Engineering</strong>
+            <p>APIs, Automation &amp; Scalable Applications</p>
+          </div>
+          <div class="hero-pillar">
+            <div class="hero-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong>Impact Driven</strong>
+            <p>Solving real business problems with measurable value</p>
+          </div>
+        </div>
+
+        <div class="hero-domains-block">
+          <h3 class="hero-domains-label">Domains I Work In</h3>
+          <div class="hero-domain-pills">
+            <span class="domain-pill">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-4.35-6-10a4 4 0 0 1 7-2.65A4 4 0 0 1 18 11c0 5.65-6 10-6 10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              Healthcare
+            </span>
+            <span class="domain-pill">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Insurance
+            </span>
+            <span class="domain-pill">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              Finance
+            </span>
+            <span class="domain-pill">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M6 21V5h5v16M15 21V9h5v12M10 9h4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              Enterprise
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-card-footer v2">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 2 2.2 6.8H21l-5.5 4 2.2 6.8L12 15.6l-5.7 4.4 2.2-6.8L2 8.8h6.8L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>Building AI solutions that create real impact.</span>
         </div>
       </div>
     </section>
@@ -74,21 +147,27 @@
     <section class="section split" id="about">
       <div>
         <p class="section-kicker">01 / ABOUT</p>
-        <h2 class="section-title">Turning data and LLMs into useful products.</h2>
+        <h2 class="section-title">Turning complex problems into intelligent solutions.</h2>
       </div>
       <div class="about-copy">
         <p>
-          I have 1+ year of professional experience across Data Science, Machine Learning,
-          Generative AI and Agentic AI systems, implementing and deploying AI-driven applications.
+          I focus on understanding how organizations work, where information gets fragmented,
+          and where manual processes create unnecessary complexity — then turning those challenges
+          into practical software solutions.
         </p>
         <p>
-          My work includes enterprise AI assistants, RAG and Agentic RAG pipelines,
-          multi-agent workflows, NLP, predictive analytics, FastAPI services and
-          cloud-based deployment.
+          My approach is simple: <strong>connect the right information, automate what can be automated,
+          and make complex workflows easier to understand and use.</strong>
+        </p>
+        <p>
+          I'm interested in solving meaningful problems across <strong>Healthcare, Insurance,
+          Financial Services, and other data-driven industries</strong> — creating technology that is
+          practical, scalable, and built around real business needs.
         </p>
         <div class="tag-row">
-          <span>LLMs</span><span>RAG</span><span>Agentic AI</span><span>Machine Learning</span>
-          <span>FastAPI</span><span>Azure</span><span>AWS</span>
+          <span>AI Solutions</span><span>Data Intelligence</span><span>Automation</span>
+          <span>Business Workflows</span><span>Healthcare</span><span>Insurance</span>
+          <span>Financial Services</span>
         </div>
       </div>
     </section>
@@ -136,95 +215,468 @@
       </div>
     </section>
 
-    <section class="section" id="projects" data-view="business">
+    <section class="section" id="projects">
       <p class="section-kicker">03 / PROJECTS</p>
-      <div class="projects-header">
-        <h2 class="section-title">Selected work</h2>
-        <div class="view-toggle" role="tablist" aria-label="Project view mode">
-          <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
-          <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
-        </div>
-      </div>
+      <h2 class="section-title">Selected work</h2>
 
       <div class="projects-grid">
-        <article class="project featured">
+        <article class="project featured" data-view="business" data-project-id="workforce360">
           <div class="project-top">
             <span class="project-number">01</span>
             <span class="project-domain">HR / WORKFORCE AI</span>
           </div>
-          <h3>Zyra 2.0</h3>
-          <p>AI-powered HR recruitment and attrition intelligence platform for smarter workforce decisions.</p>
+          <h3>Workforce360</h3>
+          <p>AI-powered HR &amp; Workforce Intelligence</p>
+          <div class="project-view-bar">
+            <div class="view-toggle project-view-toggle" role="tablist" aria-label="Workforce360 view mode">
+              <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+              <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+            </div>
+          </div>
 
           <div class="project-view project-business">
-            <h4>Business Perspective</h4>
-            <ul>
-              <li>Helps HR teams move from reactive hiring to proactive workforce planning</li>
-              <li>Reduces attrition risk by identifying employees likely to leave early</li>
-              <li>Improves hiring efficiency with demand forecasting and recruitment insights</li>
-              <li>Enables leaders to ask workforce questions in plain language instead of waiting on reports</li>
-              <li>Delivers measurable ROI through better retention and faster hiring cycles</li>
-              <li>Supports data-driven decisions across recruitment, retention and workforce strategy</li>
-            </ul>
+            <div class="project-preview">
+              <h4>Business Perspective</h4>
+              <ul class="single-col preview-list">
+                <li>Proactive workforce planning with predictive hiring and attrition intelligence</li>
+                <li>Natural-language access to workforce data beyond static reports</li>
+                <li>Executive dashboards, forecasting, and recruiter performance insights</li>
+              </ul>
+            </div>
+
+            <div class="project-detail" id="hr-business-detail" aria-hidden="true">
+              <h4>The Business Problem</h4>
+              <p>HR and workforce teams often have valuable information spread across multiple reports, spreadsheets, dashboards, and operational sources — making it difficult to get a complete view of hiring activity, understand changing demand, identify attrition risks early, or answer workforce questions without manual reporting.</p>
+              <p>The challenge is not simply having data — it is <strong>turning that data into timely and understandable information for decision-making.</strong></p>
+
+              <h4>The Solution</h4>
+              <p>This platform brings workforce analytics, predictive intelligence, and AI-assisted information access into a single system — with executive dashboards, forecasting, attrition risk analysis, recruiter insights, and natural-language querying of workforce data.</p>
+
+              <h4>Problem Areas</h4>
+              <ul class="single-col">
+                <li>Get a complete view of hiring and workforce activity</li>
+                <li>Understand changing hiring demand</li>
+                <li>Identify potential attrition risks early</li>
+                <li>Track recruitment and fulfillment performance</li>
+                <li>Compare workforce trends across teams, accounts, or business areas</li>
+                <li>Quickly answer HR questions without manually preparing reports</li>
+                <li>Turn large amounts of workforce data into actionable insights</li>
+              </ul>
+
+              <h4>Platform Capabilities</h4>
+              <ul class="single-col">
+                <li>Executive workforce dashboards</li>
+                <li>Hiring and recruitment analytics</li>
+                <li>Demand and fulfillment forecasting</li>
+                <li>Early attrition risk analysis</li>
+                <li>Recruiter performance insights</li>
+                <li>Cost and workforce metrics</li>
+                <li>AI-generated business insights</li>
+                <li>Natural-language querying of workforce data</li>
+              </ul>
+
+              <h4>Key Business Capabilities</h4>
+              <div class="capability-list">
+                <p><strong>Workforce &amp; Hiring Intelligence</strong> — Visibility into hiring demand, fulfillment, recruitment pipelines, workforce activity, and important KPIs.</p>
+                <p><strong>Predictive Workforce Planning</strong> — Forecasts future hiring demand and fulfillment trends using historical workforce patterns.</p>
+                <p><strong>Early Attrition Intelligence</strong> — Machine learning identifies employees with higher likelihood of early attrition for earlier HR investigation.</p>
+                <p><strong>Recruiter Performance Analytics</strong> — Recruiter-level performance analysis and predictive indicators to improve recruitment effectiveness.</p>
+                <p><strong>AI-Powered Business Insights</strong> — Concise insights from dashboard data so users understand trends without manually analyzing every chart.</p>
+                <p><strong>Natural-Language HR Assistant</strong> — Ask workforce-related questions in natural language and receive answers from organizational data.</p>
+              </div>
+
+              <h4>Example Business Questions</h4>
+              <ul class="single-col">
+                <li>How is hiring demand changing over time?</li>
+                <li>Which areas have increasing workforce demand?</li>
+                <li>What is the expected fulfillment trend for upcoming periods?</li>
+                <li>Which workforce segments require closer attention?</li>
+                <li>What patterns are visible in employee attrition?</li>
+                <li>How is recruitment performance changing?</li>
+                <li>What are the important trends in the current workforce data?</li>
+              </ul>
+
+              <h4>Business Value</h4>
+              <ul class="single-col">
+                <li><strong>Reduce manual analysis</strong> — Less time spent preparing repetitive reports and searching workforce data</li>
+                <li><strong>Improve workforce visibility</strong> — Bring hiring, recruitment, attrition, and workforce metrics into an accessible view</li>
+                <li><strong>Support proactive planning</strong> — Use forecasting and predictive analytics to identify future trends</li>
+                <li><strong>Improve decision-making</strong> — Faster access to understandable, data-driven insights for HR and management</li>
+                <li><strong>Make data easier to access</strong> — Interact with workforce information through natural-language questions</li>
+              </ul>
+
+              <div class="project-highlight">
+                <p>Combines <strong>business intelligence, predictive analytics, machine learning, and Generative AI</strong> into one workforce intelligence platform — moving beyond static reporting toward understanding workforce data, identifying emerging patterns, forecasting demand, and interacting with business information using natural language.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="hr-business-detail" aria-expanded="false">Read More</button>
           </div>
 
           <div class="project-view project-technical">
-            <h4>Architecture Flow</h4>
-            <p class="flow">HR Data Sources → ETL & Feature Engineering → DuckDB Analytics Store → ML Models (XGBoost Attrition + Hiring Forecast) + LangChain RAG (Azure OpenAI) → FastAPI Services → React Dashboards → Docker on Azure Container Apps</p>
-            <h4>Tools & Process</h4>
-            <ul>
-              <li>LangChain-based RAG with Azure OpenAI for conversational HR analytics</li>
-              <li>NL-to-SQL pipeline for natural-language workforce queries</li>
-              <li>XGBoost model for employee attrition prediction</li>
-              <li>Time-series forecasting for hiring demand planning</li>
-              <li>FastAPI backend with React + TypeScript frontend</li>
-              <li>DuckDB for fast analytical queries and Docker deployment on Azure</li>
-            </ul>
+            <div class="project-preview">
+              <h4>Technical Overview</h4>
+              <p class="flow">Data Sources → Data Processing → Analytics &amp; ML → AI Layer → FastAPI APIs → React Application</p>
+            </div>
+
+            <div class="project-detail" id="hr-technical-detail" aria-hidden="true">
+              <h4>High-Level Architecture</h4>
+              <p>Modular architecture where workforce data is processed and exposed through backend services, while analytics, machine learning, forecasting, and AI capabilities operate as separate intelligence layers.</p>
+
+              <h4>Data &amp; Processing Layer</h4>
+              <p>Workforce data is ingested from structured business datasets and processed using Python-based data pipelines.</p>
+              <ul class="single-col">
+                <li>Python · Pandas · NumPy · Excel / structured business data · DuckDB · PyArrow</li>
+              </ul>
+              <p>Supports both analytical workloads and the conversational AI pipeline.</p>
+
+              <h4>Analytics Layer</h4>
+              <p>Python-based services calculate workforce KPIs and analytical metrics for dashboards and business views.</p>
+              <ul>
+                <li>Hiring demand · Fulfillment · Recruitment activity</li>
+                <li>Attrition · Cost-related workforce metrics</li>
+                <li>Recruiter performance · Account / business-area performance</li>
+              </ul>
+
+              <h4>Machine Learning Layer</h4>
+              <ul class="single-col">
+                <li>Early attrition risk prediction using XGBoost</li>
+                <li>Recruiter performance prediction</li>
+                <li>Feature preprocessing using scikit-learn</li>
+                <li>Model-based scoring for workforce insights</li>
+              </ul>
+
+              <h4>Forecasting Layer</h4>
+              <p>Time-series forecasting estimates future workforce demand and fulfillment trends.</p>
+              <ul>
+                <li>Overall hiring demand · Fulfillment trends</li>
+                <li>Service / workforce segment demand</li>
+                <li>Account-level demand · Account-level fulfillment</li>
+              </ul>
+              <p>Uses statistical approaches such as <strong>Exponential Smoothing and Holt-Winters</strong> for time-series prediction.</p>
+
+              <h4>Generative AI Layer</h4>
+              <p class="flow">User Question → Intent / Context Understanding → Data Source Selection → SQL Generation → Validation → Query Execution → Natural-Language Response</p>
+              <p>Specialized AI steps handle question understanding, follow-up questions, entity identification, natural-language-to-SQL generation, SQL validation and correction, data retrieval, and natural-language explanation.</p>
+
+              <h4>AI Insights</h4>
+              <p>Dashboard data passes through an AI insight layer to identify important trends, workforce findings, forecast-related observations, and attrition-related observations — with fallback handling so analytics continue when the AI layer is unavailable.</p>
+
+              <h4>Backend</h4>
+              <ul class="single-col">
+                <li>Python · FastAPI · Pydantic · Uvicorn</li>
+              </ul>
+              <p>FastAPI services expose analytics, forecasting, machine learning, AI insights, and conversational capabilities to the frontend.</p>
+
+              <h4>Frontend</h4>
+              <ul class="single-col">
+                <li>React · TypeScript · Vite · TanStack Query · React Router · Tailwind CSS · Chart.js</li>
+              </ul>
+              <p>Dashboards, filters, predictive views, recruiter analytics, AI insights, and conversational interaction.</p>
+
+              <h4>Authentication &amp; Access</h4>
+              <p>Enterprise authentication and role-based access control different areas of the platform based on organizational role and responsibilities.</p>
+
+              <h4>Cloud &amp; Deployment</h4>
+              <ul class="single-col">
+                <li>Microsoft Azure · Azure File Storage · Azure Container Apps · Docker · Nginx</li>
+              </ul>
+              <p>Frontend and backend are containerized and deployed as separate application components.</p>
+
+              <div class="project-highlight">
+                <p>Combines <strong>business intelligence, predictive analytics, machine learning, and Generative AI</strong> — enabling organizations to understand workforce data, identify emerging patterns, forecast future demand, and interact with business information using natural language.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="hr-technical-detail" aria-expanded="false">Read More</button>
           </div>
-          <div class="tech">Python · TypeScript · SQL · LangChain · Azure OpenAI · XGBoost · FastAPI · React · DuckDB · Docker · Azure</div>
+          <div class="tech">Python · FastAPI · React · TypeScript · Azure · Azure OpenAI · LangChain · DuckDB · Pandas · XGBoost · Scikit-learn · Statsmodels · Docker</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-view="business" data-project-id="dealdesk">
           <div class="project-top">
             <span class="project-number">02</span>
             <span class="project-domain">SALES / DOCUMENT AI</span>
           </div>
-          <h3>SalesWhiz Enhancement V.2</h3>
-          <p>Enterprise document intelligence platform that helps sales teams find answers across proposals, decks and product content.</p>
+          <h3>DealDesk AI</h3>
+          <p>AI-powered Presales &amp; Document Intelligence</p>
+          <div class="project-view-bar">
+            <div class="view-toggle project-view-toggle" role="tablist" aria-label="DealDesk AI view mode">
+              <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+              <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+            </div>
+          </div>
 
           <div class="project-view project-business">
-            <h4>Business Perspective</h4>
-            <ul>
-              <li>Solves slow presales response times caused by scattered business documents</li>
-              <li>Helps sales teams reuse proven content from past proposals and case studies</li>
-              <li>Improves win rates by delivering accurate answers during client conversations</li>
-              <li>Preserves institutional knowledge when team members change roles</li>
-              <li>Reduces manual document search effort across PDFs, decks and spreadsheets</li>
-            </ul>
+            <div class="project-preview">
+              <h4>Business Perspective</h4>
+              <ul class="single-col preview-list">
+                <li>Natural-language search across case studies, proposals, references, and technical content</li>
+                <li>RFP upload and conversational exploration of requirements and skills</li>
+                <li>Executive summaries and supporting document retrieval for faster proposal preparation</li>
+              </ul>
+            </div>
+
+            <div class="project-detail" id="saleswhiz-business-detail" aria-hidden="true">
+              <h4>The Business Problem</h4>
+              <p>Presales teams work with large volumes of business and technical content such as proposals, case studies, resumes, client references, technical documents, and RFPs. Finding the right information manually can become time-consuming, especially when teams need to search across multiple document types, find relevant past projects, extract RFP requirements, match internal resources, and answer follow-up questions while maintaining conversation context.</p>
+              <p>This creates unnecessary manual effort and can slow down the presales response process.</p>
+
+              <h4>The Solution</h4>
+              <p>Instead of manually searching through large collections of documents, users can interact with organizational knowledge using natural language.</p>
+              <ul class="single-col">
+                <li>Search relevant case studies, proposals, references, resumes, and technical content</li>
+                <li>Understand the intent behind a user's question</li>
+                <li>Apply business and document metadata when searching</li>
+                <li>Handle follow-up questions using conversation context</li>
+                <li>Process uploaded RFP documents and answer questions based on RFP content</li>
+                <li>Identify required skills and qualifications</li>
+                <li>Generate skill matrices and structured executive summaries</li>
+                <li>Retrieve supporting organizational documents for an RFP</li>
+                <li>Provide source-backed responses</li>
+              </ul>
+
+              <h4>Key Business Capabilities</h4>
+              <div class="capability-list">
+                <p><strong>Intelligent Knowledge Discovery</strong> — Helps presales teams find relevant organizational experience and supporting content without manually searching large document repositories.</p>
+                <p><strong>Context-Aware Search</strong> — Understands business context such as industry, geography, document type, technology, and other filters to improve retrieval quality.</p>
+                <p><strong>RFP Intelligence</strong> — Upload an RFP and interact with its contents through natural-language questions.</p>
+                <p><strong>Requirement &amp; Skill Analysis</strong> — Extracts important requirements from an RFP and identifies relevant skills and organizational resources.</p>
+                <p><strong>Proposal Support</strong> — Retrieves relevant case studies, proposals, references, and supporting information for proposal responses.</p>
+                <p><strong>Executive Summary Generation</strong> — Transforms lengthy RFP requirements into structured summaries easier for business teams to review.</p>
+                <p><strong>Conversational Follow-ups</strong> — Continue asking questions without repeating the full context of the previous question.</p>
+                <p><strong>Knowledge Reuse</strong> — Makes existing organizational knowledge easier to discover and reuse instead of repeatedly searching for information.</p>
+              </div>
+
+              <h4>Example Business Questions</h4>
+              <ul class="single-col">
+                <li>Show relevant case studies for this requirement.</li>
+                <li>Do we have experience in this industry?</li>
+                <li>Find projects using a similar technology stack.</li>
+                <li>What capabilities are required in this RFP?</li>
+                <li>Which available profiles match these requirements?</li>
+                <li>Summarize the key objectives of this RFP.</li>
+                <li>Find supporting documents relevant to this opportunity.</li>
+                <li>What previous experience can support this proposal?</li>
+              </ul>
+
+              <h4>Business Value</h4>
+              <ul class="single-col">
+                <li><strong>Faster Presales Research</strong> — Reduces time spent searching through large collections of documents</li>
+                <li><strong>Better Knowledge Reuse</strong> — Helps teams discover and reuse existing organizational experience</li>
+                <li><strong>Faster RFP Understanding</strong> — Makes lengthy RFP documents easier to explore and understand</li>
+                <li><strong>Improved Response Preparation</strong> — Provides relevant supporting information for proposal responses</li>
+                <li><strong>Reduced Manual Work</strong> — Automates repetitive document search, requirement extraction, and summarization</li>
+                <li><strong>More Consistent Information Access</strong> — Structured natural-language access to organizational knowledge</li>
+              </ul>
+
+              <div class="project-highlight">
+                <p>Goes beyond basic document search by combining <strong>RAG, intelligent retrieval, multi-step AI orchestration, RFP intelligence, and conversational interaction</strong> — turning scattered organizational knowledge and lengthy RFP documents into searchable, contextual, and actionable information for presales teams.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="saleswhiz-business-detail" aria-expanded="false">Read More</button>
           </div>
 
           <div class="project-view project-technical">
-            <h4>Architecture Flow</h4>
-            <p class="flow">Document Upload (PDF/DOCX/PPTX/Excel) → Extraction + OCR + Vision AI → Chunking & Embeddings → Pinecone Vector Store + Neo4j Knowledge Graph → Hybrid Search + Cohere Re-ranking → Agentic RAG Retrieval Pipeline → Sales Q&A Interface</p>
-            <h4>Tools & Process</h4>
-            <ul>
-              <li>Multi-format document parsing for PDF, DOCX, PPTX and Excel</li>
-              <li>OCR and Vision AI for unstructured and image-based content</li>
-              <li>Pinecone vector retrieval with semantic search capabilities</li>
-              <li>Agentic AI pipelines for context-aware answer generation</li>
-              <li>Hybrid search with Cohere re-ranking for higher answer precision</li>
-              <li>Neo4j graph layer for relationship-aware enterprise knowledge</li>
-            </ul>
+            <div class="project-preview">
+              <h4>Technical Overview</h4>
+              <p class="flow">User → API → Guardrails &amp; Intent Detection → AI Orchestrator → Retrieval / RFP Processing → Reranking → LLM Response</p>
+            </div>
+
+            <div class="project-detail" id="saleswhiz-technical-detail" aria-hidden="true">
+              <h4>High-Level Architecture</h4>
+              <p>Modular AI workflow that separates access control, intent understanding, retrieval, document processing, and response generation.</p>
+
+              <h4>Request &amp; API Layer</h4>
+              <p>Users interact through a REST API managing user requests, session information, conversation history, document uploads, tool selection, and response generation.</p>
+              <ul class="single-col">
+                <li>Backend implemented using FastAPI</li>
+              </ul>
+
+              <h4>Guardrail &amp; Access Layer</h4>
+              <p>Before sensitive information is retrieved, the system evaluates whether the user is authorized to access the requested information — providing an additional control layer for sensitive organizational content.</p>
+
+              <h4>Intent Understanding</h4>
+              <p>The system analyzes requests to determine what the user is asking for, whether it is a follow-up, which document category is relevant, which metadata filters apply, and which content requirements are important.</p>
+
+              <h4>AI Orchestration</h4>
+              <p>Uses <strong>LangGraph</strong> to coordinate workflow stages. The orchestrator routes queries toward <strong>Knowledge Retrieval</strong> or <strong>RFP Processing</strong> within the same conversational experience.</p>
+
+              <h4>RAG &amp; Hybrid Retrieval</h4>
+              <p class="flow">Query → Hybrid Search → Deduplication → Relevance Filtering → Reranking → Answer Generation</p>
+              <ul>
+                <li>Dense semantic retrieval · Sparse keyword retrieval</li>
+                <li>Metadata filtering · Document deduplication</li>
+                <li>LLM-based relevance filtering · Reranking</li>
+              </ul>
+
+              <h4>RFP Processing</h4>
+              <p>When an RFP is uploaded, the system creates a temporary document index for that session.</p>
+              <ul>
+                <li>PDF · DOCX · XLSX processing</li>
+                <li>Document chunking · Semantic retrieval · RFP question answering</li>
+              </ul>
+              <p>RFP workflow classifies requests into actions such as <strong>Fetch → Generate → Answer</strong>.</p>
+
+              <h4>Skill Matrix Generation</h4>
+              <p class="flow">Extracts requirements → Structures required skills → Searches relevant profiles → Maps competencies → Generates evidence-based results</p>
+              <p>Connects required skills with matching profiles and supporting experience.</p>
+
+              <h4>Executive Summary Generation</h4>
+              <p>Extracts important RFP information and generates structured summaries covering project objectives, proposal highlights, relevant organizational capabilities, and supporting experience.</p>
+
+              <h4>Feedback &amp; Continuous Improvement</h4>
+              <p class="flow">User Response → Feedback → Example Storage → Similarity Retrieval → Improved Future Response</p>
+              <p>Positive feedback is stored as trained examples; lower-rated responses trigger refinement or rerun workflows.</p>
+
+              <div class="project-highlight">
+                <p>Combines <strong>RAG, intelligent retrieval, multi-step AI orchestration, RFP intelligence, and conversational interaction</strong> into a single presales workflow — turning scattered knowledge into searchable, contextual, and actionable information.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="saleswhiz-technical-detail" aria-expanded="false">Read More</button>
           </div>
-          <div class="tech">Python · LLM · NLP · Vision AI · OCR · RAG · Pinecone · Neo4j · Cohere</div>
+          <div class="tech">Python · FastAPI · LangGraph · LangChain · Azure OpenAI · Pinecone · FAISS · Cohere Reranking · RAG · Docker</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-view="business" data-project-id="insureai">
           <div class="project-top">
             <span class="project-number">03</span>
+            <span class="project-domain">INSURANCE / CLAIMS AI</span>
+          </div>
+          <h3>InsureAI</h3>
+          <p>AI-Powered Insurance Claims Intelligence</p>
+          <div class="project-view-bar">
+            <div class="view-toggle project-view-toggle" role="tablist" aria-label="InsureAI view mode">
+              <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+              <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+            </div>
+          </div>
+
+          <div class="project-view project-business">
+            <div class="project-preview">
+              <h4>Business Perspective</h4>
+              <ul class="single-col preview-list">
+                <li>Automated claim risk screening with scores, categories, and plain-English explanations</li>
+                <li>Risk-based claim routing so reviewers focus on higher-risk submissions</li>
+                <li>AI assistant and analytics dashboard for policy and claims support</li>
+              </ul>
+            </div>
+
+            <div class="project-detail" id="insureai-business-detail" aria-hidden="true">
+              <h4>The Business Problem</h4>
+              <p>Insurance teams process large amounts of policy and claims information, and claim evaluation can involve repetitive checks before a claim reaches the appropriate review stage.</p>
+              <p>A typical workflow may require teams to review customer and policy information, understand incident descriptions, compare claim amounts against coverage, identify unusual patterns, decide which claims need additional review, respond to common questions, and monitor claim volumes and risk trends.</p>
+              <p>When handled manually, straightforward claims can take unnecessary effort while potentially higher-risk claims may require additional attention. The challenge is to make the initial claim-review process <strong>faster, more consistent, and easier to manage without removing human oversight.</strong></p>
+
+              <h4>The Solution</h4>
+              <p>InsureAI provides a digital workflow where customers manage policies and submit claims, while the system automatically performs an initial AI-assisted risk assessment.</p>
+              <p>When a claim is submitted, the platform evaluates available information and produces a risk score, risk category, plain-English explanation, and recommended workflow state for further review — plus an AI assistant for common questions and an analytics dashboard for monitoring claim activity.</p>
+
+              <h4>Key Business Capabilities</h4>
+              <div class="capability-list">
+                <p><strong>Automated Claim Risk Screening</strong> — Every submitted claim is evaluated for potential risk indicators, considering claim-to-coverage ratio and incident description, presented as an easy-to-understand score and explanation.</p>
+                <p><strong>Risk-Based Claim Review</strong> — Higher-risk claims automatically move into a review state so human reviewers focus on claims requiring investigation. The system does <strong>not</strong> make final approval or rejection decisions.</p>
+                <p><strong>Policy &amp; Claims Management</strong> — Structured relationships between Customer → Policy → Claim with policy type, coverage amount, premium, dates, and status.</p>
+                <p><strong>AI Insurance Assistant</strong> — Conversational support for filing claims, premiums, coverage, claim status, and policy cancellation — using rule-based or optional LLM-powered responses.</p>
+                <p><strong>Claims Analytics</strong> — Dashboard indicators including total claims, approved payouts, high-risk claims, and average risk score for operational visibility.</p>
+              </div>
+
+              <h4>Example Business Workflow</h4>
+              <p class="flow">Customer submits claim → Policy validated → Claim analyzed → Risk score generated → Risk category assigned → Claim enters appropriate workflow → Human review where required</p>
+              <p>If a claim is identified as high risk, the system automatically assigns it to a review state rather than treating it as a normal pending claim.</p>
+
+              <h4>Business Value</h4>
+              <ul class="single-col">
+                <li><strong>Faster Initial Screening</strong> — Automates first-level risk assessment and reduces repetitive manual checks</li>
+                <li><strong>Better Risk Visibility</strong> — Clear risk score and explanation for each evaluated claim</li>
+                <li><strong>Focused Human Review</strong> — Helps reviewers prioritize claims requiring closer attention</li>
+                <li><strong>Improved Customer Support</strong> — Quick answers to common policy and claims questions</li>
+                <li><strong>Better Operational Visibility</strong> — Analytics for monitoring volumes, payouts, and risk patterns</li>
+                <li><strong>Flexible AI Adoption</strong> — Operates without paid LLM dependency using rule-based logic, with optional LLM for richer reasoning</li>
+              </ul>
+
+              <div class="project-highlight">
+                <p>Demonstrates how AI can be embedded directly into a real business workflow — <strong>Insurance Data → Claim Submission → AI Risk Analysis → Risk-Based Workflow → Human Review → Analytics</strong> — creating an end-to-end example of AI + software + business workflow integration.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="insureai-business-detail" aria-expanded="false">Read More</button>
+          </div>
+
+          <div class="project-view project-technical">
+            <div class="project-preview">
+              <h4>Technical Overview</h4>
+              <p class="flow">Frontend → FastAPI → Business APIs → SQL Database · Claim Submission → AI Risk Agent → Risk Score → Claim Storage</p>
+            </div>
+
+            <div class="project-detail" id="insureai-technical-detail" aria-hidden="true">
+              <h4>High-Level Architecture</h4>
+              <p>Three-tier architecture: frontend application, FastAPI backend, and relational database — with AI integrated into claim-processing and conversational workflows.</p>
+              <p class="flow">User Question → AI Assistant → Response</p>
+
+              <h4>Frontend Layer</h4>
+              <p>Single-page web interface with Dashboard, Claims, File a Claim, Policies, and AI Assistant — displaying summary information, risk indicators, claim statuses, and AI-generated results after claim processing.</p>
+
+              <h4>API &amp; Backend Layer</h4>
+              <ul class="single-col">
+                <li>Python · FastAPI · Uvicorn · Pydantic · SQLAlchemy</li>
+              </ul>
+              <p>REST endpoints for customers, policies, claims, analytics, AI chat, and health checks — handling validation, database operations, AI processing, and API responses.</p>
+
+              <h4>Relational Data Model</h4>
+              <p class="flow">Customer → Policy → Claim</p>
+              <p>Claim records store original information and AI-generated intelligence: claim amount, incident description, incident date, status, risk score, risk label, and AI explanation.</p>
+
+              <h4>AI Risk Scoring Layer</h4>
+              <p>Core intelligence performing <strong>Claim Risk Scoring</strong> and <strong>Insurance FAQ Assistance</strong> — receiving claim amount, policy coverage, and incident description to produce Risk Score → Risk Label → Explanation (0–100, categorized as Low, Medium, or High).</p>
+
+              <h4>Dual AI Architecture</h4>
+              <p><strong>Rule-Based Mode</strong> — Transparent logic considering claim-to-coverage ratio, suspicious phrases, and short descriptions — no external AI API required.</p>
+              <p><strong>LLM Mode</strong> — Optional OpenAI integration for richer claim reasoning, returning Score + Risk Label + Reason — with fallback to rule-based approach on failure.</p>
+
+              <h4>Claim Processing Pipeline</h4>
+              <p class="flow">Claim submitted → Backend validation → AI analysis → Risk generation → Workflow assignment → Database persistence → Frontend response</p>
+              <p>High-risk claims automatically move to review state; entire workflow executes synchronously during claim submission.</p>
+
+              <h4>Conversational AI Pipeline</h4>
+              <p class="flow">User Question → Chat API → AI Assistant → FAQ / LLM Processing → Response</p>
+              <p>Supports claims, premiums, coverage, claim status, and policy cancellation via rule-based or LLM backends.</p>
+
+              <h4>Analytics Layer</h4>
+              <p>Aggregates claim information for dashboard metrics: claim volume, approved payouts, high-risk count, and average risk score.</p>
+
+              <h4>Database &amp; Deployment</h4>
+              <ul>
+                <li>Development: SQLite · Production: PostgreSQL</li>
+                <li>SQLAlchemy ORM · Docker · Docker Compose · Python 3.11</li>
+              </ul>
+              <p>Single-container deployment design with PostgreSQL as the production database option.</p>
+
+              <div class="project-highlight">
+                <p>Embeds AI directly into insurance workflows rather than as a standalone chatbot — designed as a demonstration application showcasing <strong>AI + software + business workflow integration</strong> with transparent rule-based logic and optional LLM enrichment.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="insureai-technical-detail" aria-expanded="false">Read More</button>
+          </div>
+          <div class="tech">Python · FastAPI · SQLAlchemy · Pydantic · REST API · SQLite · PostgreSQL · OpenAI · HTML · CSS · JavaScript · Docker</div>
+        </article>
+
+        <article class="project" data-view="business" data-project-id="traffic">
+          <div class="project-top">
+            <span class="project-number">04</span>
             <span class="project-domain">ML / SMART TRAFFIC</span>
           </div>
           <h3>Spatio-Temporal Traffic Predictor</h3>
           <p>Traffic flow forecasting system built during the DRDO internship to support smarter mobility planning.</p>
+          <div class="project-view-bar">
+            <div class="view-toggle project-view-toggle" role="tablist" aria-label="Traffic Predictor view mode">
+              <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+              <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+            </div>
+          </div>
 
           <div class="project-view project-business">
             <h4>Business Perspective</h4>
@@ -252,8 +704,172 @@
       </div>
     </section>
 
+    <section class="section" id="upcoming">
+      <p class="section-kicker">04 / COMING SOON</p>
+      <h2 class="section-title">Upcoming project</h2>
+      <p class="section-note">Currently in active development — launching in the coming days.</p>
+
+      <div class="projects-grid">
+        <article class="project upcoming-project" data-view="business" data-project-id="careintel">
+          <div class="project-top">
+            <span class="project-number upcoming-label">Soon</span>
+            <span class="project-domain">HEALTHCARE / DATA INTELLIGENCE</span>
+          </div>
+          <h3>CareIntel</h3>
+          <p>AI-Powered Healthcare Intelligence</p>
+          <span class="coming-soon-badge">In Development · Coming Soon</span>
+          <div class="project-view-bar">
+            <div class="view-toggle project-view-toggle" role="tablist" aria-label="CareIntel view mode">
+              <button class="view-btn active" type="button" data-view="business" role="tab">Business View</button>
+              <button class="view-btn" type="button" data-view="technical" role="tab">Technical View</button>
+            </div>
+          </div>
+
+          <div class="project-view project-business">
+            <div class="project-preview">
+              <h4>Business Perspective</h4>
+              <ul class="single-col preview-list">
+                <li>Intelligence layer across hospital structured data and healthcare documents</li>
+                <li>Natural-language search, patient timelines, and document summarization for authorized teams</li>
+                <li>Agentic AI combining SQL, RAG, and knowledge graph retrieval with source grounding</li>
+              </ul>
+            </div>
+
+            <div class="project-detail" id="careintel-business-detail" aria-hidden="true">
+              <h4>The Business Problem</h4>
+              <p>Modern hospitals have large amounts of valuable information distributed across systems, departments, databases, reports, spreadsheets, PDFs, scanned documents, and operational applications.</p>
+              <p>Teams may need to search multiple systems, open several documents, review lab reports separately, locate discharge summaries and prescriptions, compare sources, prepare summaries manually, and spend significant time on repetitive information-review tasks.</p>
+              <p>The problem is not that the hospital lacks data — it is that <strong>the hospital has the information, but the right authorized person may not be able to find and understand it quickly enough.</strong></p>
+
+              <h4>The Solution</h4>
+              <p>An intelligence layer across approved hospital information sources. Authorized users ask questions in natural language and receive information from appropriate sources — making existing healthcare information <strong>easier to find, connect, understand, and use</strong> without replacing HIS, EMR/EHR, laboratory, pharmacy, or radiology systems.</p>
+              <ul class="single-col">
+                <li>Search structured healthcare information and documents</li>
+                <li>Connect related information across sources</li>
+                <li>Build patient and record timelines · Summarize records</li>
+                <li>Answer natural-language business questions with supporting sources</li>
+                <li>Identify data-quality issues · Provide operational insights</li>
+              </ul>
+
+              <h4>Who Uses It</h4>
+              <div class="capability-list">
+                <p><strong>Clinical / Authorized Healthcare Teams</strong> — Quickly locate patient information and supporting records.</p>
+                <p><strong>Medical Records Teams</strong> — Find, organize, and review documents more efficiently.</p>
+                <p><strong>Hospital Administrators &amp; Management</strong> — Record completeness, workload, operational trends, and summarized insights.</p>
+                <p><strong>Operations &amp; IT Teams</strong> — Trends, bottlenecks, data connections, access, and governance.</p>
+              </div>
+
+              <h4>What Information Can It Work With</h4>
+              <ul>
+                <li><strong>Structured:</strong> Patients, encounters, appointments, labs, medications, operational records</li>
+                <li><strong>Documents:</strong> Consultation notes, discharge summaries, prescriptions, diagnostic reports, referrals</li>
+                <li><strong>Scanned documents</strong> via extraction/OCR · Metadata for document type, date, department, patient reference</li>
+              </ul>
+
+              <h4>Key Business Capabilities</h4>
+              <div class="capability-list">
+                <p><strong>Patient Record Overview</strong> — Concise overview of available patient information instead of opening multiple sources.</p>
+                <p><strong>Intelligent Document Discovery</strong> — Search discharge summaries, reports, prescriptions, and consultation documents.</p>
+                <p><strong>Patient Timeline</strong> — Chronological organization of encounters and document events.</p>
+                <p><strong>Natural-Language Data Questions</strong> — Ask about counts, trends, departments, activity, and documentation in plain language.</p>
+                <p><strong>Document Summarization</strong> — Concise summaries with supporting references.</p>
+                <p><strong>Management Insights</strong> — Activity, documentation volume, department trends, and information gaps.</p>
+                <p><strong>Data Quality Review</strong> — Identify incomplete, duplicated, or inconsistent information.</p>
+              </div>
+
+              <h4>Example Business Scenario</h4>
+              <p class="flow">Find encounter → Open discharge summary → Find lab reports → Check prescriptions → Review documents → Prepare summary</p>
+              <p>With CareIntel: <strong>“Show the important records related to this patient's previous hospitalization.”</strong> → Identify record → Retrieve connected information → Find documents → Combine evidence → Prepare overview with supporting records.</p>
+
+              <h4>How AI Adds Value</h4>
+              <p>Natural-language understanding, document understanding, semantic retrieval, summarization, cross-source assistance, and source-grounded responses — interacting with healthcare information based on <strong>meaning and context</strong> rather than exact keyword searches.</p>
+
+              <h4>Business Benefits</h4>
+              <ul class="single-col">
+                <li><strong>Faster Information Access</strong> — Less time finding records and documents</li>
+                <li><strong>Better Information Visibility</strong> — Discover information across approved sources</li>
+                <li><strong>Improved Staff Productivity</strong> — Reduce repetitive searching and manual review</li>
+                <li><strong>Faster Decision Support</strong> — Quicker starting point for reviewing information</li>
+                <li><strong>Better Record Management</strong> — Surface incomplete or inconsistent data for review</li>
+                <li><strong>Scalable Information Access</strong> — Intelligence layer that expands with organizational needs</li>
+              </ul>
+
+              <div class="project-highlight">
+                <p>Creates an <strong>AI intelligence layer over existing healthcare information</strong> — helping authorized teams move from “the hospital has the information” to “the right person can quickly find, understand, verify, and use the information” without replacing professional judgment.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="careintel-business-detail" aria-expanded="false">Read More</button>
+          </div>
+
+          <div class="project-view project-technical">
+            <div class="project-preview">
+              <h4>Technical Overview</h4>
+              <p class="flow">Hospital Data → Ingestion → Extraction/OCR → PostgreSQL + Vector Store + Knowledge Graph → Agentic Orchestration → FastAPI → React</p>
+            </div>
+
+            <div class="project-detail" id="careintel-technical-detail" aria-hidden="true">
+              <h4>High-Level Architecture</h4>
+              <p class="flow">Hospital Data Sources → Ingestion &amp; Integration → Extraction/OCR/Validation → Normalization &amp; Metadata → Structured DB + Vector Store + Knowledge Graph → Agentic Orchestration → SQL + RAG + Graph Retrieval → Validation &amp; Guardrails → FastAPI → React → Authorized User</p>
+              <p>Hybrid architecture — structured questions use structured data, semantic questions use document retrieval, relationship questions use the knowledge graph.</p>
+
+              <h4>Data Ingestion Layer</h4>
+              <p>Approved information from CSV, Excel, database exports, APIs, PDF, DOCX, scanned reports — each source traced via metadata.</p>
+
+              <h4>Document Processing Pipeline</h4>
+              <p class="flow">Document → Validation → Text Extraction/OCR → Classification → Metadata Extraction → Cleaning → Chunking → Embedding → Vector Index + Document Store</p>
+              <p>Classifies consultation notes, discharge summaries, lab reports, prescriptions, and diagnostic reports with preserved page references.</p>
+
+              <h4>Structured Data Pipeline</h4>
+              <p class="flow">Hospital Data → Schema Validation → Cleaning → Standardization → Entity Validation → Data Quality Checks → PostgreSQL → Analytics/SQL Agent</p>
+
+              <h4>Three Complementary Knowledge Layers</h4>
+              <ul class="single-col">
+                <li><strong>Relational Database</strong> — Exact facts, filtering, aggregations, counts (e.g. encounter counts)</li>
+                <li><strong>Vector Store</strong> — Semantic document retrieval and narrative information</li>
+                <li><strong>Knowledge Graph</strong> — Relationships: Patient → Encounter → Doctor → Document → Lab</li>
+              </ul>
+
+              <h4>Agentic AI Architecture</h4>
+              <p class="flow">User Question → Supervisor Agent → Intent + Context + Access Check → SQL | RAG | Graph Agents → Summary Agent → Validation/Guardrails → Answer + Sources → Audit Logging</p>
+              <div class="capability-list">
+                <p><strong>Supervisor Agent</strong> — Routes requests to required capabilities.</p>
+                <p><strong>SQL / Data Agent</strong> — Structured questions, filters, and aggregations.</p>
+                <p><strong>Document / RAG Agent</strong> — Semantic and metadata-based document retrieval.</p>
+                <p><strong>Graph Agent</strong> — Relationship and connected-entity context.</p>
+                <p><strong>Summary &amp; Validation Agents</strong> — Evidence combination, source checks, citations, and scope validation.</p>
+              </div>
+
+              <h4>Example Agentic Query Flow</h4>
+              <p>For <strong>“Show important records related to Patient P001's previous hospitalization”</strong> — verify context, locate encounter, retrieve documents, use semantic/graph search, combine evidence, generate summary, validate against evidence, return references, audit log.</p>
+
+              <h4>Application Layer</h4>
+              <ul>
+                <li><strong>Backend:</strong> Python · FastAPI · Pydantic · Uvicorn</li>
+                <li><strong>Frontend:</strong> React · TypeScript · Tailwind CSS · Chart.js</li>
+              </ul>
+
+              <h4>Security &amp; Responsible AI</h4>
+              <p>Role-based access, hospital-approved authentication, encryption, audit logging, source references, human review for consequential decisions, privacy controls — <strong>not an autonomous diagnosis or treatment engine</strong>.</p>
+
+              <h4>MVP &amp; Future Expansion</h4>
+              <p><strong>MVP:</strong> One hospital, synthetic demo data, document ingestion, structured data, semantic retrieval, knowledge graph, specialized agents, source-grounded answers, dashboard, RBAC, audit logging.</p>
+              <p><strong>Future:</strong> Live integrations, FHIR-aligned exchanges, advanced data quality, operational ML, enterprise monitoring, human-in-the-loop workflows.</p>
+
+              <div class="project-highlight">
+                <p>Combines <strong>Structured Data + Documents + Knowledge Graph + RAG + SQL + Agentic AI + Validation + Source Grounding</strong> — an intelligence layer that assists users without replacing hospital systems of record or professional judgment.</p>
+              </div>
+            </div>
+
+            <button class="read-more-btn" type="button" data-detail="careintel-technical-detail" aria-expanded="false">Read More</button>
+          </div>
+          <div class="tech">React · TypeScript · FastAPI · Azure OpenAI · LangGraph · LangChain · PostgreSQL · Pinecone · Neo4j · Azure AI Document Intelligence · Docker · Azure Container Apps · Microsoft Entra ID</div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="skills">
-      <p class="section-kicker">04 / SKILLS</p>
+      <p class="section-kicker">05 / SKILLS</p>
       <h2 class="section-title">Technical toolkit</h2>
       <div class="skills-grid">
         <div class="skill-card"><h3>Generative AI</h3><p>LLMs · GPT-4 · Prompt Engineering · RAG · Agentic RAG · NL-to-SQL</p></div>
@@ -268,7 +884,7 @@
     </section>
 
     <section class="section education" id="education">
-      <p class="section-kicker">05 / EDUCATION</p>
+      <p class="section-kicker">06 / EDUCATION</p>
       <div class="education-card">
         <div class="logo-box logo-box--srys">
           <img src="assets/srys_logo.png" alt="Sreyas Institute of Engineering and Technology logo" />
@@ -282,7 +898,7 @@
     </section>
 
     <section class="section" id="certification">
-      <p class="section-kicker">06 / CERTIFICATION</p>
+      <p class="section-kicker">07 / CERTIFICATION</p>
       <div class="cert-card">
         <div class="logo-box logo-box--databricks">
           <img src="assets/Explore-the-Generative-AI-Fundamentals-by-Databricks-Free-Start-Now.jpg" alt="Databricks logo" />
@@ -300,7 +916,7 @@
     </section>
 
     <section class="section contact-section" id="contact">
-      <p class="section-kicker">07 / CONTACT</p>
+      <p class="section-kicker">08 / CONTACT</p>
       <h2 class="contact-title">Let's build something useful with AI.</h2>
       <p class="contact-text">
         If you're hiring, building an AI product, or exploring an AI solution for your organization,
@@ -320,6 +936,6 @@
     <div>© <span id="year"></span> All rights reserved.</div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
